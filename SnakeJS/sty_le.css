@@ -1,0 +1,66 @@
+
+*{
+    box-sizing: border-box;
+    font-family: 'Press Start 2P';
+}
+body{
+    background-color:rgb(124, 122, 122) ;
+}
+h1{
+    font-size: 5vh;
+}
+.tag{
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    text-decoration: none;
+    color: black;
+    padding:2vh;
+    font-size: 2vh;
+    z-index: -1;
+}
+.text{
+    position: absolute;
+    bottom:0vh;
+    left:0vh;
+    line-height: 2.8vh;
+    padding:2vh;
+    padding-left:3vh;
+    font-size: 2vh;
+    margin:0px;
+}
+p>span{
+    font-style: italic;
+    font-size: .8em;
+}
+.board{
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    overflow: hidden;
+    box-shadow: 0px 0px 1.5px 1.5px;
+}
+.snake{
+    position: absolute;
+    background-color:rgb(0, 71, 170);
+    opacity:0.9;
+}
+.food{
+    position: absolute;
+    opacity:0.9;
+}
+.score{
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    opacity: 0.7;
+    padding: 20px;
+    margin-top: 0px;
+}
+@media (min-width:1040px){
+    .board{
+        width: 1040px;
+        height: 520px;
+    }
+}
