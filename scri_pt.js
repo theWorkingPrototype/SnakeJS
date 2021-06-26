@@ -33,7 +33,8 @@ var levelLine = board.getElementsByClassName("line")[0];
     var paused;
     var game_over;
 
-    console.log("oRaNge ^~^")
+    console.log("   ^~^");
+    console.log("  oRaNge");
     var sizew;
     // =2*parseInt((visualViewport.width>1040?1040:visualViewport.width)/80);
     var sizeh;
