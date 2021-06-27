@@ -4,10 +4,9 @@ var score_board = document.getElementsByClassName("score")[0];
 var levelLine = board.getElementsByClassName("line")[0];
 
     var score = 0;
-    var limitScore = 50;
-    if (!localStorage.highScore || localStorage.highScore < 75)
-        localStorage.highScore = 75;
-    //i made it iight
+    var limitScore = 30;
+    if (!localStorage.highScore || localStorage.highScore < 50)
+        localStorage.highScore = 50;
 
 
     var NightMode = false;
@@ -54,7 +53,7 @@ console.log("  oRaNge");
 
     document.addEventListener("keydown", (e) => { kDown(e) });
     function initialise() {
-        if (div)
+            if (div)
             board.removeChild(div);
         div = null;
         optionsText = "The little snek's dissapointment is immesurable.";
@@ -62,7 +61,7 @@ console.log("  oRaNge");
         levelLine = board.getElementsByClassName("line")[0];
         if (NightMode) disableNightMode();
         score = 0;
-        limitScore = 50;
+        limitScore = 30;
         xvel = 1; yvel = 0;
         speed = 125;
         first = true;
@@ -141,7 +140,7 @@ console.log("  oRaNge");
                     }, 1000);
                 }, 1000);
             }
-        if (!game_over && score == 50 && !complete) {
+        if (!game_over && score >= limitScore && !complete) {
             pause();
             completed();
         }
@@ -777,15 +776,4 @@ console.log("  oRaNge");
             k = xvel; xvel = nxvel; nxvel = k;
         }
         k = true;
-    }
-
-
-
-    //blink eyes
-    //after eating
-    //on start
-    //on ded?
-    //am hungry after 5 sec idle
-    //shine tag @theworkingprototype
-    //font for messages
-    //font for completed
+    }   
