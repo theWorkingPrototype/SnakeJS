@@ -60,6 +60,7 @@ var levelLine = board.getElementsByClassName("line")[0];
         optionsText = "The little snek's dissapointment is immesurable.";
         //and its day is ruined.
         levelLine = board.getElementsByClassName("line")[0];
+        levelLine.style.width=0+"%";
         if (NightMode) disableNightMode();
         score = 0;
         limitScore = 50;
