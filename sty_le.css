@@ -8,8 +8,6 @@ body{
     width:1vw;
     overflow: hidden;
     transition: background-image 1s ease;
-	
-    background-image: url("blacktris.jpg");
     background-image: url("whitetris.jpg");
 }   
 
@@ -37,7 +35,10 @@ h1{
 }
 
 
-
+.text{
+	background-image:url("blacktris.jpg");
+	visibility:hidden;
+}
 
 /*Add orange ^~^ shine to Tag*/
 .glowy {
