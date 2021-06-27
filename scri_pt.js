@@ -33,15 +33,15 @@ var levelLine = board.getElementsByClassName("line")[0];
     var paused;
     var game_over;
 
-    console.log("   ^~^");
-    console.log("  oRaNge");
+console.log("    ^~^");
+console.log("  oRaNge");
     var sizew;
-    // =2*parseInt((visualViewport.width>1040?1040:visualViewport.width)/80);
+    // =2*parseInt((window.innerWidth>1040?1040:window.innerWidth)/80);
     var sizeh;
-    // =parseInt((visualViewport.height>520?520:visualViewport.height)/80);
+    // =parseInt((window.innerHeight>520?520:window.innerHeight)/80);
     var size;
     // =sizeh>sizew?sizew:sizeh;
-    // size=visualViewport.width;
+    // size=window..innerWidth;
     // completed();
     var divEye1 = document.createElement("div");
     var divEye2 = document.createElement("div");
@@ -60,7 +60,6 @@ var levelLine = board.getElementsByClassName("line")[0];
         optionsText = "The little snek's dissapointment is immesurable.";
         //and its day is ruined.
         levelLine = board.getElementsByClassName("line")[0];
-        levelLine.style.width=0+"%";
         if (NightMode) disableNightMode();
         score = 0;
         limitScore = 50;
@@ -155,16 +154,16 @@ var levelLine = board.getElementsByClassName("line")[0];
     function resize() {
         //dosnt resize eyes {>.<}  try it
         var sizei = size;
-        sizew = 2 * parseInt((visualViewport.width > 1000 ? 1000 : visualViewport.width) / 80);
-        sizeh = 2 * parseInt((visualViewport.height > 500 ? 500 : visualViewport.height) / 40);
+        sizew = 2 * parseInt((window.innerWidth > 1000 ? 1000 : window.innerWidth) / 80);
+        sizeh = 2 * parseInt((window.innerHeight > 500 ? 500 : window.innerHeight) / 40);
         size = sizeh > sizew ? sizew : sizeh;
-        // size=visualViewport.width;
+        // size=window.innerWidth;
         if (size * 40 < 600) document.getElementsByClassName("text")[0].style.visibility = "hidden";
         // size=2*parseInt(size/80);
         board.style.height = size * 20 + "px";
         board.style.width = size * 40 + "px";
-        board.style.left = (visualViewport.width - size * 40) / (2) + "px";
-        board.style.top = (visualViewport.height - size * 20) / (2) + "px";
+        board.style.left = (window.innerWidth - size * 40) / (2) + "px";
+        board.style.top = (window.innerHeight - size * 20) / (2) + "px";
     
         if (size == sizei) return;
         arr = board.getElementsByClassName("snake");
@@ -365,9 +364,11 @@ var levelLine = board.getElementsByClassName("line")[0];
             divEye1.style.left = width * 1 / 6 + "px";
             divEye1.style.bottom = height * 1 / 5 + "px";
             divEye1.style.top = "unset";
+            divEye1.style.right = "unset";
             divEye2.style.right = width * 1 / 6 + "px";
             divEye2.style.bottom = height * 1 / 5 + "px";
             divEye2.style.left = "unset";
+            divEye2.style.top = "unset";
             height += 2;
         }
         div.style.left = left + "px";
