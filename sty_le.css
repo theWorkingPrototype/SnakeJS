@@ -8,6 +8,8 @@ body{
     width:1vw;
     overflow: hidden;
     transition: background-image 1s ease;
+	
+    background-image: url("blacktris.jpg");
     background-image: url("whitetris.jpg");
 }   
 
